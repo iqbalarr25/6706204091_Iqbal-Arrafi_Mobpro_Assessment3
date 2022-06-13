@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.annotation.GravityInt
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
 import org.d3if4091.kalkulatoramoeba.ApiStatus
 import org.d3if4091.kalkulatoramoeba.R
 import org.d3if4091.kalkulatoramoeba.databinding.FragmentCreatorBinding
@@ -38,6 +39,7 @@ class CreatorFragment : Fragment() {
             binding.tvBio.text = getString(R.string.bio, it.bio)
             binding.tvLocation.text = getString(R.string.location, it.location)
             binding.tvGithubUrl.text = getString(R.string.github_url, it.html_url)
+            Glide.with(binding.imageView.context).load(it.avatar_url).error(R.drawable.ic_baseline_account_circle_24).into(binding.imageView)
         }
         viewModel.getStatus().observe(viewLifecycleOwner) {
             updateProgress(it)
