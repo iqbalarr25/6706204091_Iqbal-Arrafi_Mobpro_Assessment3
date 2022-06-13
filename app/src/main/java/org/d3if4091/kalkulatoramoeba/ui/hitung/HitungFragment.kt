@@ -52,6 +52,7 @@ class HitungFragment : Fragment() {
             value -> saveDatabaseManager = value
             activity?.invalidateOptionsMenu()
         }
+        viewModel.scheduleNotifier(requireActivity().application)
         viewModel.getHasilAmoeba().observe(requireActivity()) { showResult(it) }
     }
 
