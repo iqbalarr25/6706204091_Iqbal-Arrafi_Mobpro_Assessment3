@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            app:civ_circle_background_color="@color/green_500"
+            tools:src="@drawable/ic_baseline_account_circle_24"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:textSize="24sp"
+            android:text="@string/name_creator"
+            tools:text="Iqbal Arrafi"/>
+
+        <TextView
+            android:id="@+id/tv_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="3dp"
+            android:textSize="20sp"
+            android:text="@string/company"
+            tools:text="Telkom University"/>
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_company"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="36dp"
+            android:textSize="18sp"
+            android:text="@string/username"
+            tools:text="Username github: iqbalarr25"/>
+
+        <TextView
+            android:id="@+id/tv_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_username"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="@string/bio"
+            tools:text="Bio: Just an ordinary flutter developer"/>
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_bio"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="@string/location"
+            tools:text="Location: Bekasi"/>
+
+        <TextView
+            android:id="@+id/tv_github_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_location"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="@string/github_url"
+            tools:text="Github url: https://github.com/iqbalarr25"/>
+
+        <TextView
+            android:id="@+id/networkError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/koneksi_error"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
