@@ -25,11 +25,10 @@
     <string name="unsave_database">Nonaktifkan database</string>
     <string name="share_hasil">Share hasil</string>
     <string name="bagikan_template">Tahukah kalian?\nJumlah pembelahan amoeba yang awalnya terdapat %1$s buah amoeba, setelah melakukan pembelahan %2$s amoeba setiap %3$s menit selama %4$s menit, dapat menghasilkan %5$s buah amoeba lohh.</string>
-    <string name="name_creator">%1$s</string>
-    <string name="company">%1$s</string>
     <string name="username">Username github: %1$s</string>
     <string name="bio">Bio: %1$s</string>
-    <string name="location">Location: %1$s</string>
+    <string name="location">Lokasi: %1$s</string>
     <string name="github_url">Github url: %1$s</string>
     <string name="koneksi_error">Koneksi error</string>
+    <string name="tentang_pembuat">Tentang pembuat</string>
 </resources>

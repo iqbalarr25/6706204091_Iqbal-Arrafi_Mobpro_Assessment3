@@ -3,12 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="20dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="26dp">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/view_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="imageView, tv_name, tv_company, tv_username, tv_bio, tv_location, tv_github_url"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageView"
@@ -17,9 +26,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="56dp"
             app:civ_circle_background_color="@color/green_500"
-            tools:src="@drawable/ic_baseline_account_circle_24"/>
+            android:src="@drawable/ic_baseline_account_circle_24"
+            tools:src="@drawable/ic_baseline_account_circle_24" />
 
         <TextView
             android:id="@+id/tv_name"
@@ -30,7 +40,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="16dp"
             android:textSize="24sp"
-            android:text="@string/name_creator"
             tools:text="Iqbal Arrafi"/>
 
         <TextView
@@ -42,7 +51,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="3dp"
             android:textSize="20sp"
-            android:text="@string/company"
             tools:text="Telkom University"/>
 
         <TextView
@@ -85,6 +93,8 @@
             app:layout_constraintTop_toBottomOf="@id/tv_location"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="26dp"
+            android:autoLink="web"
             android:textSize="18sp"
             android:text="@string/github_url"
             tools:text="Github url: https://github.com/iqbalarr25"/>
